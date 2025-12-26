@@ -1,0 +1,469 @@
+/* ==================== ROOT VARIABLES ==================== */
+:root {
+  --bg-main: #EEF7FF;        /* main background - very light blue */
+  --bg-card: #CDE8E5;        /* card / section background - soft teal */
+  --accent: #4D869C;         /* primary accent / buttons / headings - deep teal/blue */
+  --accent-hover: #7AB2B2;   /* accent hover / buttons - lighter teal */
+  --text-main: #4D869C;      /* main text color - deep teal for readability */
+  --text-muted: #7AB2B2;     /* secondary / muted text - lighter teal */
+  --border-light: #4D869C;   /* subtle borders - deep teal */
+  --glow: rgba(77, 134, 156, 0.25); /* glow / highlight - translucent deep teal */
+}
+
+
+/* ==================== GLOBAL RESET ==================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--bg-main);
+  color: var(--text-main);
+  line-height: 1.6;
+}
+
+/* ==================== NAVBAR ==================== */
+.navbar {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 8%;
+  background-color: var(--bg-card);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 4px 15px var(--glow);
+}
+
+.navbar .logo h1 {
+  font-size: 1.8rem;
+  color: var(--accent);
+}
+
+.navbar .nav-list {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+.navbar .nav-list li a {
+  text-decoration: none;
+  color: var(--text-main);
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.navbar .nav-list li a:hover {
+  color: var(--accent-hover);
+}
+
+/* ==================== HERO SECTION ==================== */
+.hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 100px 8%;
+  gap: 50px;
+  flex-wrap: wrap;
+}
+
+.hero-content img {
+  max-width: 300px;
+  border-radius: 50%;
+  border: 5px solid var(--accent);
+  box-shadow: 0 8px 25px var(--glow);
+}
+
+.hero-text h1 {
+  font-size: 3rem;
+  color: var(--accent);
+  margin-bottom: 10px;
+}
+
+.hero-text p {
+  font-size: 1.3rem;
+  color: var(--text-main);
+  margin-bottom: 20px;
+}
+
+.download-btn {
+  display: inline-block;
+  padding: 12px 25px;
+  background-color: var(--accent);
+  color: var(--bg-main);
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.download-btn:hover {
+  background-color: var(--accent-hover);
+  transform: translateY(-2px);
+}
+
+/* ==================== ABOUT SECTION ==================== */
+.about {
+  padding: 80px 8%;
+  text-align: center;
+}
+
+.about h2 {
+  font-size: 2.8rem;
+  color: var(--accent);
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.about h2::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 4px;
+  background-color: var(--accent);
+  margin: 12px auto 0;
+  border-radius: 2px;
+}
+
+.about p {
+  font-size: 1.2rem;
+  color: var(--text-main);
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.8;
+}
+
+/* ==================== QUALIFICATION SECTION ==================== */
+.qualification {
+  padding: 80px 8%;
+  text-align: center;
+}
+
+.qualification h2 {
+  font-size: 2.8rem;
+  color: var(--accent);
+  margin-bottom: 40px;
+  position: relative;
+}
+
+.qualification h2::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 4px;
+  background-color: var(--accent);
+  margin: 12px auto 0;
+  border-radius: 2px;
+}
+
+.qualification-cards {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.card {
+  background-color: var(--bg-card);
+  padding: 25px 30px;
+  border-radius: 20px;
+  box-shadow: 0 8px 20px var(--glow);
+  max-width: 350px;
+  width: 100%;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 25px var(--glow);
+}
+
+.card h3 {
+  font-size: 1.5rem;
+  color: var(--accent);
+  margin-bottom: 15px;
+}
+
+.card p {
+  font-size: 1.1rem;
+  color: var(--text-main);
+  line-height: 1.6;
+}
+
+/* ==================== PROJECTS SECTION ==================== */
+.projects {
+  padding: 80px 8%;
+  text-align: center;
+}
+
+.projects h2 {
+  font-size: 2.8rem;
+  color: var(--accent);
+  margin-bottom: 40px;
+  position: relative;
+}
+
+.projects h2::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 4px;
+  background-color: var(--accent);
+  margin: 12px auto 0;
+  border-radius: 2px;
+}
+
+.project-item {
+  background-color: var(--bg-card);
+  padding: 25px 30px;
+  margin-bottom: 25px;
+  border-radius: 20px;
+  box-shadow: 0 8px 20px var(--glow);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 25px var(--glow);
+}
+
+.project-item h3 {
+  font-size: 1.6rem;
+  color: var(--accent);
+  margin-bottom: 12px;
+}
+
+.project-item p {
+  font-size: 1.1rem;
+  color: var(--text-main);
+  line-height: 1.7;
+}
+
+/* ==================== CONTACT SECTION ==================== */
+.contact {
+  padding: 80px 8%;
+  text-align: center;
+}
+
+.contact h2 {
+  font-size: 2.8rem;
+  color: var(--accent);
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.contact h2::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 4px;
+  background-color: var(--accent);
+  margin: 12px auto 0;
+  border-radius: 2px;
+}
+
+.contact p {
+  font-size: 1.1rem;
+  color: var(--text-main);
+  margin-bottom: 30px;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.contact-cards {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  flex-wrap: wrap;
+}
+
+.contact-cards .card {
+  max-width: 350px;
+}
+
+.contact i {
+  color: var(--accent);
+  margin-right: 10px;
+}
+
+.contact a {
+  color: var(--accent);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.contact a:hover {
+  color: var(--accent-hover);
+}
+
+/* ==================== FOOTER ==================== */
+footer {
+  background-color: var(--bg-card);
+  text-align: center;
+  padding: 25px 8%;
+  color: var(--text-main);
+  box-shadow: 0 -4px 15px var(--glow);
+  margin-top: 50px;
+  font-size: 0.95rem;
+}
+
+/* ==================== RESPONSIVE ==================== */
+
+/* Large tablets & small desktops */
+@media (max-width: 1024px) {
+  .hero-text h1 {
+    font-size: 2.4rem;
+  }
+
+  .hero-text p {
+    font-size: 1.1rem;
+  }
+
+  .projects h2,
+  .qualification h2,
+  .about h2,
+  .contact h2 {
+    font-size: 2.4rem;
+  }
+
+  .qualification-cards,
+  .contact-cards,
+  .hero-content {
+    gap: 20px;
+  }
+}
+
+/* Tablets */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .nav-list {
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+  }
+
+  .hero {
+    flex-direction: column;
+    gap: 25px;
+    text-align: center;
+    padding: 60px 5%;
+  }
+
+  .hero-content img {
+    max-width: 220px;
+  }
+
+  .hero-text h1 {
+    font-size: 2rem;
+  }
+
+  .hero-text p {
+    font-size: 1rem;
+  }
+
+  .qualification-cards,
+  .contact-cards {
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+  }
+
+  .project-item,
+  .card {
+    max-width: 100%;
+  }
+}
+
+/* Mobile devices */
+@media (max-width: 480px) {
+  .hero {
+    padding: 40px 5%;
+  }
+
+  .hero-content {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .hero-text h1 {
+    font-size: 1.8rem;
+  }
+
+  .hero-text p {
+    font-size: 0.95rem;
+  }
+
+  .download-btn {
+    padding: 10px 20px;
+    font-size: 0.9rem;
+  }
+
+  .about h2,
+  .qualification h2,
+  .projects h2,
+  .contact h2 {
+    font-size: 2rem;
+  }
+
+  .about p,
+  .project-item p,
+  .card p,
+  .contact p {
+    font-size: 0.95rem;
+  }
+
+  .qualification-cards,
+  .contact-cards,
+  .project-item {
+    width: 100%;
+  }
+
+  .navbar .logo h1 {
+    font-size: 1.5rem;
+  }
+
+  .nav-list li a {
+    font-size: 0.95rem;
+  }
+}
+
+/* Extra small devices */
+@media (max-width: 360px) {
+  .hero-text h1 {
+    font-size: 1.6rem;
+  }
+
+  .hero-text p {
+    font-size: 0.9rem;
+  }
+
+  .download-btn {
+    padding: 8px 16px;
+    font-size: 0.85rem;
+  }
+
+  .about h2,
+  .qualification h2,
+  .projects h2,
+  .contact h2 {
+    font-size: 1.8rem;
+  }
+
+  .about p,
+  .project-item p,
+  .card p,
+  .contact p {
+    font-size: 0.9rem;
+  }
+}
