@@ -1,5 +1,8 @@
 # Karuppaiya Murugan | Full Stack Developer
 
+## 🚀 Live Demo
+[View Live Demo](https://karuppaiya-dev.github.io/portfolio-html-css/)
+
 Welcome to my personal portfolio website! This website showcases my skills, projects, and contact information. Built using **HTML, CSS, and Font Awesome**, it features a clean, modern, and responsive design.
 
 ---
